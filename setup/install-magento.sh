@@ -11,9 +11,9 @@ php /home/magento/public/bin/magento setup:install \
         --db-password=m@gento \
         --admin-user=MageAdmin \
         --admin-password=l3tmein \
-        --admin-email=tuncayuner@gmail.com \
-        --admin-firstname=Tuncay \
-        --admin-lastname=Uner \
+        --admin-email=admin@@localhost \
+        --admin-firstname=AdminFirstname \
+        --admin-lastname=AdminLastname \
         --use-rewrites=1 \
         --backend-frontname=admin
 
