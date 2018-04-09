@@ -3,7 +3,7 @@ Bare minimum development environment for Magento2.
 This configuration has 2 containers:
 
 - Nginx/PHP-FPM7 (yarimadam/magento2)
-- MySQL 5.6.39 (official)
+- MySQL 5.7.21 (official)
 
 Provisioning information for web container can be found at [here](https://github.com/yarimadam/magento2-dockerfile).
 
