@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+  magento2:
+    image: yarimadam/magento2:1.0.0
+    user: magento
+    volumes:
+      - ./setup:/setup
+      - ./public:/home/magento/public:delegated
+      - ./log:/home/magento/log:delegated
+    depends_on:
+      - mysql
+    ports:
+      - "80:80"
+    entrypoint: bash /setup/bootstrap.sh
+    environment:
+      MAGENTO_BASE_URL: ${MAGENTO_BASE_URL}
+
+  mysql:
+    image: mysql:5.7.21
+    restart: always
+    volumes:
+      - ./db/:/var/lib/mysql:delegated
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: l3tmein
+      MYSQL_DATABASE: magento
+      MYSQL_USER: magento
+      MYSQL_PASSWORD: m@gento
